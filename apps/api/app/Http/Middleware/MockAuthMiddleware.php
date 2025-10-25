@@ -9,8 +9,15 @@ class MockAuthMiddleware
 {
     public function handle(Request $request, Closure $next)
     {
+        // Izinkan preflight CORS
+        if ($request->isMethod('OPTIONS')) {
+            return $next($request);
+        }
+
         $token = $request->bearerToken();
-        if ($token !== 'mocked.jwt.token.123') {
+        $expected = env('MOCK_AUTH_TOKEN', 'mocked.jwt.token.123');
+        
+        if (! $token || $token !== $expected) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
         return $next($request);
