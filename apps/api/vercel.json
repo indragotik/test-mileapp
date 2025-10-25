@@ -9,7 +9,7 @@
       { "src": "/(.*)", "dest": "apps/api/public/index.php" }
     ],
     "public": true,
-    "buildCommand": "cd apps/api && vite build",
+    "buildCommand": "vite build",
     "outputDirectory": "apps/api/public",
     "env": {
         "APP_ENV": "production",
