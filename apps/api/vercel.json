@@ -5,12 +5,16 @@
         "api/index.php": { "runtime": "vercel-php@0.6.2" }
     },
     "routes": [
-        { "src": "/build/(.*)", "dest": "/public/build/" },
-        { "src": "/(.*)", "dest": "/api/index.php" }
+      { "src": "/build/(.*)", "dest": "apps/api/public/build/$1" },
+      { "src": "/(.*)", "dest": "apps/api/public/index.php" }
+    ],
+    "builds": [
+      { "src": "apps/api/public/index.php", "use": "@vercel/php" },
+      { "src": "apps/api/package.json", "use": "@vercel/static-build", "config": { "distDir": "apps/api/public" } }
     ],
     "public": true,
-    "buildCommand": "vite build",
-    "outputDirectory": "public",
+    "buildCommand": "cd apps/api && vite build",
+    "outputDirectory": "apps/api/public",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
