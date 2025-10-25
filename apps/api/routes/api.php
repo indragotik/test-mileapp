@@ -5,7 +5,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TaskController;
 
 Route::get('/', function () {
-    return require __DIR__ . "/../public/index.php";
+    require __DIR__ . "/../public/index.php";
+    return "";
 });
 
 Route::middleware('api')->group(function () {
