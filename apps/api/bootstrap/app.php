@@ -14,6 +14,8 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->api(prepend: [
             \Illuminate\Http\Middleware\HandleCors::class,
+            // substitute bindings memastikan route model binding & binding bekerja
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ]);
         $middleware->alias([
             'mock.auth' => \App\Http\Middleware\MockAuthMiddleware::class
