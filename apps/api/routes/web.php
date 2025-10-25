@@ -10,3 +10,7 @@ Route::get('/', function () {
         'status' => 'running'
     ]);
 });
+
+Route::get('/test', function () {
+    return "This is a test route";
+});
