@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Foundation\Console\Kernel;
+use Illuminate\Console\Scheduling\Schedule;
 
 return new class extends Kernel
 {
