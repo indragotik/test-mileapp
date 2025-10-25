@@ -1,15 +1,15 @@
 {
     "version": 2,
     "framework": null,
-    "builds": [
-        { "src": "/api/index.php", "use": "vercel-php@0.6.2" },
-        { "src": "/public/**", "use": "@vercel/static" }
-    ],
+    "functions": {
+        "api/index.php": { "runtime": "vercel-php@0.6.2" }
+    },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/" },
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "public": true,
+    "buildCommand": "vite build",
     "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
