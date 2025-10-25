@@ -2,11 +2,10 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "index.php": { "runtime": "vercel-php@0.6.2" }
+        "./index.php": { "runtime": "vercel-php@0.6.2" }
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/" },
-        { "src": "/api/(.*)", "dest": "/api/index.php?path=$1" },
         { "src": "/(.*)", "dest": "/index.php" }
     ],
     "public": true,
