@@ -8,10 +8,6 @@
       { "src": "/build/(.*)", "dest": "apps/api/public/build/$1" },
       { "src": "/(.*)", "dest": "apps/api/public/index.php" }
     ],
-    "builds": [
-      { "src": "apps/api/public/index.php", "use": "@vercel/php" },
-      { "src": "apps/api/package.json", "use": "@vercel/static-build", "config": { "distDir": "apps/api/public" } }
-    ],
     "public": true,
     "buildCommand": "cd apps/api && vite build",
     "outputDirectory": "apps/api/public",
