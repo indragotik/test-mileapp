@@ -12,18 +12,3 @@ Route::get('/', function () {
         'status' => 'running'
     ]);
 });
-
-Route::get('/test', function () {
-    return "This is a test route";
-});
-
-// Route::get('/user', function (Request $request) {
-//     return $request->user();
-// })->middleware('auth:sanctum');
-
-// Route::post('/login', [AuthController::class, 'login'])
-//     ->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
-
-// Route::middleware('mock.auth')->group(function () {
-//     Route::apiResource('tasks', TaskController::class);
-// });
