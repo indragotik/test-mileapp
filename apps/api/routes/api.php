@@ -10,7 +10,8 @@ use App\Http\Controllers\TaskController;
 // })->middleware('auth:sanctum');
 
 Route::middleware('api')->group(function () {
-    Route::post('/login', [AuthController::class, 'login']);
+    Route::post('/login', [AuthController::class, 'login'])
+        ->withoutMiddleware([\App\Http\Middleware\VerifyCsrfToken::class]);
 });
 
 Route::middleware('mock.auth')->group(function () {
