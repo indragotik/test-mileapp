@@ -28,6 +28,8 @@
         "SESSION_DRIVER": "cookie",
         "DB_CONNECTION": "mongodb",
         "DB_DSN": "mongodb+srv://Vercel-Admin-mileapp-test:AuTIXFtbpza5h5EM@mileapp-test.qzcqngp.mongodb.net/mileapp-test?retryWrites=true&w=majority",
-        "DB_DATABASE": "myapp_mileapp"
+        "DB_DATABASE": "myapp_mileapp",
+        "SANCTUM_STATEFUL_DOMAINS": "test-mileapp-frontend-1.vercel.app,localhost"
+        
     }
 }
