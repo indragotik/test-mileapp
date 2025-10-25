@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TaskController;
 
-Route::middleware('api')->group(function () {
+// Route::middleware('api')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
 
     Route::get('/user', function (Request $request) {
@@ -16,7 +16,7 @@ Route::middleware('api')->group(function () {
         // resource tasks (GET/POST/PUT/DELETE) => /api/tasks
         Route::apiResource('tasks', TaskController::class);
     });
-});
+// });
 
 // Route::get('/user', function (Request $request) {
 //     return $request->user();
