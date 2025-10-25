@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font optional (bisa tambahkan Inter dari Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  @apply bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800 antialiased;
+}
