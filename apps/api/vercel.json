@@ -27,7 +27,7 @@
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
         "DB_CONNECTION": "mongodb",
-        "DB_DSN": "mongodb+srv://muhammadindrapermana14_db_user:nEag8TyxDA4sRB0p@cluster0.wrztnjb.mongodb.net/myapp_mileapp?retryWrites=true&w=majority",
+        "DB_DSN": "mongodb+srv://Vercel-Admin-mileapp-test:AuTIXFtbpza5h5EM@mileapp-test.qzcqngp.mongodb.net/mileapp-test?retryWrites=true&w=majority",
         "DB_DATABASE": "myapp_mileapp"
     }
 }

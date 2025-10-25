@@ -7,7 +7,7 @@ use MongoDB\Laravel\Eloquent\Model;
 class Task extends Model
 {
     protected $connection = 'mongodb';
-    protected $collection = 'mileapp';
+    protected $collection = 'mileapp-test';
 
     protected $fillable = [
         'title',
